@@ -4,11 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Green</title>
+    <title>James Green - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="James Green - WDD 230 - Web Frontend Development - course assignment portal">
+    <meta name="author" content="James Green">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
 </head>
 
 <body>
-
+    <header>
+        <img src="optimized-profile.jpg" alt="Profile Image">
+        <h1>James Green</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Site Plan</a></li>
+            <li><a href="#">Form</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="main-grid">
+            <h2>WDD 230: Web Frontend Development</h2>
+            <hr id="main-line">
+            <div id="grid-container">
+                <section class="card" id="learning-info">
+                    <h3>Learning Activities</h3>
+                    <hr>
+                    <ul>
+                        <!-- List items will be populated throughout the course -->
+                    </ul>
+                </section>
+                <section class="card" id="general-info">
+                    <h3>Information</h3>
+                    <p>Today's Weather: Sunny, 75°F</p>
+                    <p>Page Visits: 1234</p>
+                    <p>Last Updated: 2023-11-2</p>
+                    <p>Most Visited Page: Home</p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> James Green, USA</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>

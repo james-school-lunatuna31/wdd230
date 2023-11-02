@@ -1,0 +1,120 @@
+/* 
+35524A - This will be used for the main background color
+627C85 - This will be used for the header and footer background color
+779CAB - This will be used for the text color
+A27035 - This will be used for the link color
+B88B4A - This will be used for the hover color on links 
+*/
+:root {
+    --default-background-color: #779CAB;
+    /* Light Blue */
+    --default-header-footer-color: #B88B4A;
+    /* Golden Brown */
+    --default-text-color: #550d5f;
+    /* Dark Orange */
+    --default-link-color: #C3D79F;
+    /* Orange Red */
+    --default-hover-color: #A27035;
+    /* Brownish Orange */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--default-background-color);
+    color: var(--default-text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header,
+footer {
+    background-color: var(--default-header-footer-color);
+    color: var(--default-header-footer-color);
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style-type: none;
+    padding: 20px;
+}
+
+nav ul li {
+    padding: 20px;
+    background-color: dimgrey;
+    border: 1px white solid
+}
+
+a {
+    color: var(--default-link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--default-hover-color);
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+    justify-items: center;
+    margin: auto;
+    padding: 16px;
+}
+
+#grid-container {
+    grid-row: 3;
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    min-width: 80%;
+    max-width: 80%;
+    padding: 8px;
+}
+
+.main-grid h2 {
+    text-align: center;
+    grid-row: 1;
+    grid-column: span 2;
+}
+
+.main-grid #main-line {
+    grid-row: 2;
+    grid-column: span 2;
+    width: 90%;
+}
+
+
+.main-grid section {
+    border: 1px white solid;
+    margin: 8px;
+    padding: 0px;
+}
+
+.main-grid #grid-container section {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.main-grid section h3 {
+    text-align: left;
+    padding: 8px;
+    padding-bottom: 2px;
+}
+
+.main-grid section hr {
+    margin: auto;
+    width: 80%;
+}
+
+.card ul {
+    list-style-type: none;
+}
