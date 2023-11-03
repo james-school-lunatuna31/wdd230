@@ -1,19 +1,12 @@
-/* 
-35524A - This will be used for the main background color
-627C85 - This will be used for the header and footer background color
-779CAB - This will be used for the text color
-A27035 - This will be used for the link color
-B88B4A - This will be used for the hover color on links 
-*/
 :root {
-    --default-background-color: #779CAB;
-    /* Light Blue */
+    --default-background-color: #fff;
+    /* White cuz lightblue was ugly */
     --default-header-footer-color: #B88B4A;
     /* Golden Brown */
-    --default-text-color: #550d5f;
-    /* Dark Orange */
+    --default-text-color: #000000;
+    /* black because it works with white */
     --default-link-color: #C3D79F;
-    /* Orange Red */
+    /* light green because orange red was too hard to see */
     --default-hover-color: #A27035;
     /* Brownish Orange */
 }
@@ -41,21 +34,33 @@ nav ul {
     text-align: center;
     list-style-type: none;
     padding: 20px;
+    align-items: center;
 }
 
 nav ul li {
-    padding: 20px;
+    padding: 10px;
     background-color: dimgrey;
-    border: 1px white solid
+    border: 1px white solid;
+    width: 80%;
+    cursor: pointer;
+    transition: background-colo 0.3s ease;
+}
+
+nav ul li a {
+    pointer-events: none;
+}
+
+nav ul li:hover {
+    background-color: rgb(169, 166, 166);
+}
+
+nav ul li:hover a {
+    color: var(--default-hover-color);
 }
 
 a {
     color: var(--default-link-color);
     text-decoration: none;
-}
-
-a:hover {
-    color: var(--default-hover-color);
 }
 
 .main-grid {
@@ -72,6 +77,7 @@ a:hover {
     grid-column: span 2;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     min-width: 80%;
     max-width: 80%;
     padding: 8px;
@@ -81,9 +87,15 @@ a:hover {
     text-align: center;
     grid-row: 1;
     grid-column: span 2;
+    font-family: 'Aldhabi', serif;
+    font-size: 1.5em;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .main-grid #main-line {
+    padding-top: 0;
+    margin-top: 0;
     grid-row: 2;
     grid-column: span 2;
     width: 90%;
@@ -103,16 +115,61 @@ a:hover {
 }
 
 
-
-.main-grid section h3 {
-    text-align: left;
-    padding: 8px;
-    padding-bottom: 2px;
+.main-grid .card .banner h3 {
+    text-align: center;
+    padding: 0;
+    padding-bottom: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .main-grid section hr {
     margin: auto;
     width: 80%;
+}
+
+.main-grid .card {
+    background-color: bisque;
+    margin: 8px;
+    min-height: 200px;
+    min-width: 250px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.main-grid .card .banner {
+    background-color: #779CAB;
+    box-sizing: border-box;
+    width: 100%;
+    order: 1;
+}
+
+.main-grid .card ul {
+    margin: 8px 8px 8px 0;
+    padding: 8px;
+    order: 2;
+}
+
+.main-grid .card ul li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.main-grid .card #info {
+    margin: auto;
+    width: fit-content;
+}
+
+.main-grid .card #info li {
+    margin: auto;
+    width: fit-content;
+
+}
+
+.card a {
+    color: blue;
 }
 
 .card ul {

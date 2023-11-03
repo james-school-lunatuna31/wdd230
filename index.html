@@ -30,18 +30,24 @@
             <hr id="main-line">
             <div id="grid-container">
                 <section class="card" id="learning-info">
-                    <h3>Learning Activities</h3>
-                    <hr>
+                    <div class="banner">
+                        <h3>Learning Activities</h3>
+                    </div>
                     <ul>
-                        <!-- List items will be populated throughout the course -->
+                        <li>Week 01 | <a href="#">Learning Activities</a> | <a href="#">Test</a></li>
+                        <li>Week 02 | <a href="#">Learning Activities</a> | <a href="#">Test</a></li>
                     </ul>
                 </section>
                 <section class="card" id="general-info">
-                    <h3>Information</h3>
-                    <p>Today's Weather: Sunny, 75°F</p>
-                    <p>Page Visits: 1234</p>
-                    <p>Last Updated: 2023-11-2</p>
-                    <p>Most Visited Page: Home</p>
+                    <div class="banner">
+                        <h3>Information</h3>
+                    </div>
+                    <ul id="info">
+                        <li>Today's Weather: Sunny, 75°F</li>
+                        <li>Page Visits: 1234</li>
+                        <li>Last Updated: 2023-11-2</li>
+                        <li>Most Visited Page: Home</li>
+                    </ul>
                 </section>
             </div>
         </div>
@@ -50,6 +56,9 @@
         <p>&copy; <span id="currentYear"></span> James Green, USA</p>
         <p id="lastModified"></p>
     </footer>
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/additional.js"></script>
+    </script>
 </body>
 
 </html>
