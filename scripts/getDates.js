@@ -1,2 +1,2 @@
-const date = new Date().getFullYear();
-console.log(date)
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = new Date();

@@ -1,49 +1,51 @@
-:root {
-    --default-background-color: #fff;
-    /* White cuz lightblue was ugly */
-    --default-header-footer-color: #B88B4A;
-    /* Golden Brown */
-    --default-text-color: #000000;
-    /* black because it works with white */
-    --default-link-color: #C3D79F;
-    /* light green because orange red was too hard to see */
-    --default-hover-color: #A27035;
-    /* Brownish Orange */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--default-background-color);
-    color: var(--default-text-color);
-    margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
+    padding: 20px;
 }
 
 header,
 footer {
-    background-color: var(--default-header-footer-color);
-    color: var(--default-header-footer-color);
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 20px;
 }
+
+nav {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 
 nav ul {
     display: flex;
     flex-direction: column;
     text-align: center;
     list-style-type: none;
-    padding: 20px;
+    width: 100%;
     align-items: center;
 }
 
 nav ul li {
     padding: 10px;
-    background-color: dimgrey;
+    background-color: rgb(134, 132, 132);
     border: 1px white solid;
-    width: 80%;
+
+    width: 100%;
     cursor: pointer;
-    transition: background-colo 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a {
@@ -55,11 +57,11 @@ nav ul li:hover {
 }
 
 nav ul li:hover a {
-    color: var(--default-hover-color);
+    color: #fff;
 }
 
 a {
-    color: var(--default-link-color);
+    color: #333;
     text-decoration: none;
 }
 
@@ -101,7 +103,6 @@ a {
     width: 90%;
 }
 
-
 .main-grid section {
     border: 1px white solid;
     margin: 8px;
@@ -113,7 +114,6 @@ a {
     height: 100%;
     box-sizing: border-box;
 }
-
 
 .main-grid .card .banner h3 {
     text-align: center;
@@ -129,7 +129,7 @@ a {
 }
 
 .main-grid .card {
-    background-color: bisque;
+    background-color: #fff;
     margin: 8px;
     min-height: 200px;
     min-width: 250px;
@@ -137,6 +137,8 @@ a {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 .main-grid .card .banner {
@@ -165,7 +167,6 @@ a {
 .main-grid .card #info li {
     margin: auto;
     width: fit-content;
-
 }
 
 .card a {
@@ -174,4 +175,8 @@ a {
 
 .card ul {
     list-style-type: none;
+}
+
+#lastModified {
+    color: yellow;
 }
