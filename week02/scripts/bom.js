@@ -3,7 +3,6 @@ const button = document.querySelector('button');
 const list = document.querySelector('#list');
 button.addEventListener('click', () => {
     if (input.value != "") {
-        //code here
         const li = document.createElement('li');
         const del = document.createElement('button');
         del.ariaLabel = "close button";
