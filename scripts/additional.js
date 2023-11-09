@@ -13,7 +13,7 @@ document.querySelectorAll('.learning-info-item a').forEach(function (a) {
 
     });
     if (a.getAttribute('href') === '#') {
-        a.style.color = 'red';
+        a.style.color = '#a32e2e';
         a.style.textDecoration = 'underline';
         a.setAttribute('title', 'under construction');
     } else {

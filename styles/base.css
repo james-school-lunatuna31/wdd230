@@ -40,7 +40,7 @@ nav ul {
 
 nav ul li {
     padding: 10px;
-    background-color: rgb(134, 132, 132);
+    background-color: #ccc;
     border: 1px white solid;
 
     width: 100%;
@@ -142,7 +142,7 @@ a {
 }
 
 .main-grid .card .banner {
-    background-color: #779CAB;
+    background-color: #a1d0e2;
     box-sizing: border-box;
     width: 100%;
     order: 1;
@@ -170,7 +170,8 @@ a {
 }
 
 .card a {
-    color: blue;
+    color: #a32e2e;
+    color:
 }
 
 .card ul {
