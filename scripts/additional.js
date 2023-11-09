@@ -20,3 +20,10 @@ document.querySelectorAll('.learning-info-item a').forEach(function (a) {
         a.style.color = 'blue';
     }
 });
+const active = document.querySelector('.active');
+
+active.removeAttribute('href'); // kill the users ability to re-load the page by clicking "Home"
+active.style.pointerEvents = 'none'; // Remove the highlighting on the active tab when the user mouses over.
+
+
+
