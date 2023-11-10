@@ -41,6 +41,10 @@ nav ul {
     background-color: #9ad99a;
 }
 
+.active a {
+    font-weight: bold;
+}
+
 nav ul li {
     padding: 10px;
     background-color: #ccc;
@@ -248,5 +252,9 @@ body.darkmode {
 }
 
 .darkmode .active {
-    background-color: #548654;
+    background-color: #3b5e3b;
+}
+
+.darkmode .active a {
+    color: #fafafa;
 }
