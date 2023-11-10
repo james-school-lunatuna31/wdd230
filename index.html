@@ -24,7 +24,8 @@
         <h1>James Green</h1>
     </header>
     <nav>
-        <ul>
+        <button class="hamburger" aria-label="Toggle menu">☰</button>
+        <ul class="nav-menu">
             <li class="active"><a href="#">Home</a></li>
             <!-- Consider adding the wayfinding later. I think I will go for some colors-->
             <li><a href="#">Chamber</a></li>
@@ -33,6 +34,7 @@
         </ul>
     </nav>
     <main>
+        <button id="dark-moder">Dark Mode</button>
         <div class="main-grid">
             <h2>WDD 230: Web Frontend Development</h2>
             <hr id="main-line">
@@ -72,7 +74,7 @@
         <p id="lastModified"></p>
     </footer>
     <script src="scripts/getDates.js"></script>
-    <script src="scripts/additional.js"></script>
+    <script src="scripts/additional.js" defer></script>
 </body>
 
 </html>

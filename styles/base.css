@@ -191,3 +191,62 @@ a {
 #lastModified {
     color: yellow;
 }
+
+.hamburger {
+    display: block;
+}
+
+.nav-menu {
+    display: none;
+}
+
+.nav-menu.open {
+    display: block;
+}
+
+.card li a {
+    color: blue;
+}
+
+body.darkmode {
+    background-color: #444242;
+    color: #e1d9d9;
+}
+
+.darkmode .main-grid .card {
+    background-color: #322e2e;
+}
+
+.darkmode .main-grid .card .banner {
+    background-color: #19556d;
+}
+
+.darkmode .card li a {
+    color: rgb(92, 92, 228);
+}
+
+.darkmode .nav-menu {
+    background-color: #444242;
+}
+
+.darkmode nav ul li {
+    background-color: #ccc;
+    border-top: 3px #444242 solid;
+    border-left: 1.5px #444242 solid;
+    border-right: 1.5px #444242 solid;
+    border-bottom: 3px #444242 solid;
+    box-sizing: border-box;
+}
+
+.darkmode nav ul li:hover {
+    background-color: #a9a6a6;
+    border-top: 3px #b4c1fd solid;
+    border-left: 1.5px #b4c1fd solid;
+    border-right: 1.5px #b4c1fd solid;
+    border-bottom: 3px #b4c1fd solid;
+    box-sizing: border-box;
+}
+
+.darkmode .active {
+    background-color: #548654;
+}
