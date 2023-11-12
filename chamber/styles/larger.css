@@ -1,0 +1,194 @@
+@media screen and (min-width: 600px) {
+
+    * {
+        margin: 8px;
+    }
+
+    /* Global Header Styles */
+    header * {
+        margin: 0px;
+    }
+
+    header {
+        background-color: var(--footer-background-color);
+        color: var(--list-item-color);
+        text-align: center;
+        padding: 0px;
+        margin: 0;
+    }
+
+    /* Component Header Styles */
+    header nav ul {
+        background-color: var(--nav-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    header nav ul li {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 8px;
+    }
+
+    header nav ul li:hover {
+        filter: brightness(80%);
+        background-color: #002147;
+        transition: background-color 0.3s ease;
+    }
+
+    header nav ul li.active {
+        background-color: var(--header-color);
+        pointer-events: none;
+    }
+
+    header nav ul li.active a {
+        background-color: var(--header-color);
+        pointer-events: none;
+        color: black;
+    }
+
+    header nav ul li.active:hover {
+        filter: none;
+        background-color: var(--header-color);
+        transition: none;
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 8px;
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    header nav ul li a:hover {
+        filter: brightness(80%);
+        transition: filter 0.3s ease;
+    }
+
+
+    /* Global Body Styles */
+    body {
+        background-color: var(--background-color);
+        font-family: 'Roboto', 'Times New Roman', serif;
+        color: var(--font-color);
+    }
+
+    /* Component Body Styles */
+    body h1,
+    body h2 {
+        color: var(--header-color);
+        font-family: 'Arial', sans-serif;
+    }
+
+    body ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    body ul li {
+        margin-bottom: 10px;
+        color: var(--list-item-color);
+    }
+
+    body .cta {
+        color: var(--call-to-action)
+    }
+
+    body a {
+        color: black;
+    }
+
+    body a:hover {
+        color: var(--link-hover-color);
+    }
+
+    /* Construct Body Styles */
+    /* Construct Body Styles -- main grid */
+    body .main-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        box-sizing: border-box;
+    }
+
+    /* Construct Body Styles -- main grid -- left col */
+    body .main-grid .left-col {
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    body .main-grid .left-col section {
+        height: 50%
+    }
+
+    body .main-grid .left-col section p {
+        margin: 16px;
+    }
+
+    body .main-grid .left-col #join-input {
+        display: flex;
+    }
+
+    /* Construct Body Styles -- main grid -- Right col */
+
+    body .main-grid .right-col section img {
+        max-width: 100%;
+        height: 100%;
+        margin: 8px;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    body .main-grid .right-col section {
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: flex-start;
+    }
+
+    body .main-grid .right-col #news-headline {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    body .main-grid .right-col #news-headline p {
+        margin-top: 16px;
+    }
+
+    body .main-grid .right-col #news {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: var(--footer-background-color);
+        color: var(--list-item-color);
+        text-align: center;
+        padding: 8px;
+    }
+
+    /* Variable dictionary */
+    :root {
+        --background-color: #002147;
+        --font-color: #FFFFFF;
+        --header-color: #7dbbbf;
+        --list-item-color: #f9d362;
+        --call-to-action: #f9d362;
+        --link-color: #f9d362;
+        --link-hover-color: #f9d362;
+        --nav-color: #699cce;
+        --footer-background-color: #284262ff;
+    }
+}

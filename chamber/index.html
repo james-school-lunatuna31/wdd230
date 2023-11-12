@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Green - WDD 230 - Chamber Home Page</title>
+    <meta property="og:title" content="James Green - WDD 230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://james-school-lunatuna31.github.io/wdd230/Chamber">
+    <meta property="og:image" content="placeholder.jpg"> <!-- Replace with image URL -->
+    <meta property="og:description" content="James Green - WDD 230 - Web Frontend Development - Chamber Home Page">
+    <meta name="description" content="James Green - WDD 230 - Web Frontend Development - Chamber Home Page">
+    <meta name="author" content="James Green">
+    <link ref="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="hero"></div>
+        <nav>
+            <ul class="nav-menu">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Site Plan</a></li>
+                <li><a href="#">Form</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-grid">
+            <div class="left-col">
+                <section>
+                    <h2>Welcome</h2>
+                    <p>Description Here</p>
+                </section>
+                <section>
+                    <h2>
+                        Join Us
+                    </h2>
+                    <p>Join information...<span class="cta"> enter your email below</span></p>
+                    <div id="join-input">
+                        <textarea></textarea>
+                        <button id="signup">Sign Up</button>
+                        <p id="button-response">response = null</p>
+                    </div>
+                </section>
+            </div>
+            <div class="right-col">
+                <section id="news-headline">
+                    <img src="images/placeholder.png" alt="placeholder">
+                    <p>Sample Text</p>
+                </section>
+                <section id="news-section">
+                    <div id="news">
+                        <h2>Upcoming Events</h2>
+                        <ul>
+                            <li>Event 1</li>
+                            <li>Event 2</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p id="DynamicDate">Dynamic Datetime</p>
+        <p>course description</p>
+        <p id="DynamicLastModified">Last Modified: Null</p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
