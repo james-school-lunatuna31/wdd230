@@ -17,6 +17,12 @@
         margin: 0;
     }
 
+    hero {
+        display: flex;
+        width: 200px;
+        flex-direction: row;
+    }
+
     /* Component Header Styles */
     header nav ul {
         background-color: var(--nav-color);
@@ -156,6 +162,7 @@
     body .main-grid .right-col #news-headline {
         display: flex;
         align-items: flex-start;
+        flex-direction: row;
     }
 
     body .main-grid .right-col #news-headline p {

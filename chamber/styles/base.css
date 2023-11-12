@@ -154,6 +154,7 @@ body .main-grid .right-col section {
 body .main-grid .right-col #news-headline {
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
 }
 
 body .main-grid .right-col #news-headline p {
