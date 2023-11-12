@@ -70,11 +70,13 @@
         font-family: 'Helvetica', 'Arial', sans-serif;
         font-size: 20px;
         text-decoration: none;
+        color: black
     }
 
     header nav ul li a:hover {
         filter: brightness(80%);
         transition: filter 0.3s ease;
+        color: var(--link-hover-color)
     }
 
 
@@ -107,7 +109,7 @@
     }
 
     body a {
-        color: black;
+        color: var(--nav-color);
     }
 
     body a:hover {
