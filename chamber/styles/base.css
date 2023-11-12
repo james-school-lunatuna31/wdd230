@@ -45,7 +45,7 @@ header nav ul li.active {
 }
 
 header nav ul li.active a {
-    background-color: var(--header-color);
+    background-color: #7eb3e7;
     pointer-events: none;
     color: black;
 }
