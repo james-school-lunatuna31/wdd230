@@ -57,6 +57,14 @@ nav ul {
 
 }
 
+li.direct {
+    background-color: lightblue;
+}
+
+li.direct:hover {
+    background-color: rgb(76, 94, 100);
+}
+
 .active a {
     font-weight: bold;
     pointer-events: none;
@@ -66,7 +74,6 @@ nav ul {
 .active:hover a {
     color: #333;
     cursor: default;
-
 }
 
 nav ul li {

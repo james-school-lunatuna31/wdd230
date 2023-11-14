@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Green - WDD 230 - Web Frontend Development - Responsive Images</title>
+    <meta property="og:title" content="James Green - WDD 230 - Web Frontend Development - Responsive Images">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://james-school-lunatuna31.github.io/wdd230/week03/responsive-images.html">
+    <meta name="description" content="James Green - WDD 230 - Web Frontend Development - Responsive Images Activity">
+    <meta name="author" content="James Green">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/week03-base.css">
+    <link rel="stylesheet" href="styles/responsive-images.css">
+    <link rel=" icon" href="/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Responsive Images</h1>
+        <nav>
+            <ul>
+                <li class="direct"><a href="images/webp-example-image.webp">WebP Images (Direct Link)</a></li>
+                <li><a href="https://james-school-lunatuna31.github.io/wdd230/week03/lazyload.html">Lazy
+                        Loading</a>
+                </li>
+                <li class="active"><a href="#"">Responsive Images</a></li>
+                <li><a href=" #">Webstorage</a></li>
+                <li><a href="https://james-school-lunatuna31.github.io/wdd230/">Course Homepage</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Images</h1>
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 500px)" srcset="images/hero-small.webp">
+                <source media="(max-width: 1000px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-large.webp" alt="Washington D.C. Temple Exterior View" width="1500px"
+                    height="750px">
+            </picture>
+        </div>
+        <footer>
+            <h2>Last Modified:</h2>
+            <p id="DynamicDate">dynamic date</p>
+            <p id="copy">&copy; James Green</p>
+        </footer>
+        <script src="/scripts/basic.js"></script>
+</body>
+
+</html>
