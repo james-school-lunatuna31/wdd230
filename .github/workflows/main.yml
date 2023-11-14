@@ -1,4 +1,4 @@
-name: CI
+name: Validate HTML and CSS
 
 on:
   push:
@@ -7,18 +7,24 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  validation:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: Validate HTML
-      uses: docker://validator/validator:latest
-      with:
-        args: /github/workspace/**/*.html
+    - name: HTML Validation
+      run: |
+        docker run --rm -v $PWD:/workspace ghcr.io/validator/validator:latest /bin/bash -c "find . -name '*.html' -exec vnu --errors-only --skip-non-html {} +"
 
-    - name: Validate CSS
-      uses: docker://validator/validator:latest
-      with:
-        args: /github/workspace/**/*.css
+    - name: Install stylelint
+      run: npm install stylelint stylelint-config-standard
+
+    - name: CSS Validation
+      run: |
+        FILES=$(find . -name '*.css')
+        if [ -n "$FILES" ]; then
+          npx stylelint $FILES
+        else
+          echo "No CSS files found."
+        fi
