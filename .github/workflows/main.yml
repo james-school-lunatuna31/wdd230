@@ -14,11 +14,11 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Validate HTML
-      uses: docker://validator/validator:latest
+      uses: w3c-validation-action/w3c-validation-action@v1
       with:
-        args: /github/workspace/**/*.html
+        file_glob: '**/*.html'
 
     - name: Validate CSS
-      uses: docker://validator/validator:latest
+      uses: w3c-validation-action/w3c-validation-action@v1
       with:
-        args: /github/workspace/**/*.css
+        file_glob: '**/*.css'
