@@ -1,0 +1,18 @@
+button.added {
+    margin: 8px;
+}
+
+#list {
+    margin: 16px;
+}
+
+#list li {
+    background-color: rgb(231, 249, 255);
+    box-sizing: border-box;
+    border: 1px black solid;
+    padding: 8px;
+}
+
+.content {
+    margin: 24px;
+}
