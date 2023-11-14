@@ -7,22 +7,20 @@ on:
     branches: [ master ]
 
 jobs:
-  validate:
+  validation:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: Validate HTML
-      uses: marketplacer/w3c-validation@master
-      with:
-        files: |
-          $(find . -name '*.html')
+    - name: HTML Validation
+      run: |
+        docker run --rm -v $PWD:/workspace ghcr.io/validator/validator:latest /bin/bash -c "find . -name '*.html' -exec vnu --errors-only --skip-non-html {} +"
 
     - name: Install stylelint
       run: npm install stylelint stylelint-config-standard
 
-    - name: Validate CSS
+    - name: CSS Validation
       run: |
         FILES=$(find . -name '*.css')
         if [ -n "$FILES" ]; then
