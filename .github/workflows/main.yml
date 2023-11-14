@@ -13,12 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Validate HTML
-      uses: w3c-validation-action/w3c-validation-action@v1
+    - name: Validate HTML and CSS
+      uses: jakepartusch/website-validator-action@v1
       with:
-        file_glob: '**/*.html'
-
-    - name: Validate CSS
-      uses: w3c-validation-action/w3c-validation-action@v1
-      with:
-        file_glob: '**/*.css'
+        scan: 'file:///**/*.html, file:///**/*.css'
