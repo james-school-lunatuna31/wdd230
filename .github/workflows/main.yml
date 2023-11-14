@@ -15,8 +15,8 @@ jobs:
 
     - name: Validate HTML
       run: |
-        docker run -v ${{ github.workspace }}:/app -w /app w3c/validator:latest vnu-runtime-image/bin/vnu --skip-non-html *.html
+        docker run -v ${{ github.workspace }}:/app -w /app html5validator/validator
 
     - name: Validate CSS
       run: |
-        docker run -v ${{ github.workspace }}:/app -w /app w3c/validator:latest java -jar css-validator/css-validator.jar --warning=0 --profile=css3 *.css
+        docker run -v ${{ github.workspace }}:/app -w /app jankx/css-validator *.css
