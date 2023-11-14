@@ -17,42 +17,40 @@
 </head>
 
 <body>
+    <header>
+        <h1>📖 Book of Mormon - Top 10</h1>
+        <nav>
+            <ul>
+                <li class="direct"><a href="images/webp-example-image.webp">WebP Images (Direct Link)</a></li>
+                <li><a href="https://james-school-lunatuna31.github.io/wdd230/week03/lazyload.html">Lazy
+                        Loading</a>
+                </li>
+                <li><a href="https://james-school-lunatuna31.github.io/wdd230/week03/responsive-images.html">Responsive
+                        Images</a></li>
+                <li class="active"><a href=" #">Webstorage</a></li>
+                <li><a href="https://james-school-lunatuna31.github.io/wdd230/">Course Homepage</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Book of Mormon Top 10 Scriptures</h1>
+        <div class="content">
+            <label for="favchap">Enter Book and Chapter: </label>
+            <input type="text" id="favchap" placeholder="Alma 5">
+            <button type="submit">Add Chapter</button>
+            <ul id="list"></ul>
+            <label>Click to clear local storage</label>
+            <button id="clear" type="submit">Clear Storage</button>
+        </div>
+    </main>
 
-    <body>
-        <header>
-            <h1>📖 Book of Mormon - Top 10</h1>
-            <nav>
-                <ul>
-                    <li class="direct"><a href="images/webp-example-image.webp">WebP Images (Direct Link)</a></li>
-                    <li><a href="https://james-school-lunatuna31.github.io/wdd230/week03/lazyload.html">Lazy
-                            Loading</a>
-                    </li>
-                    <li><a href="https://james-school-lunatuna31.github.io/wdd230/week03/responsive-images.html">Responsive
-                            Images</a></li>
-                    <li class="active"><a href=" #">Webstorage</a></li>
-                    <li><a href="https://james-school-lunatuna31.github.io/wdd230/">Course Homepage</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <h1>Book of Mormon Top 10 Scriptures</h1>
-            <div class="content">
-                <label for="favchap">Enter Book and Chapter: </label>
-                <input type="text" id="favchap" placeholder="Alma 5">
-                <button type="submit">Add Chapter</button>
-                <ul id="list"></ul>
-                <label for="clearstroage">Click to clear local storage</label>
-                <button id="clear" type="submit">Clear Storage</button>
-            </div>
-        </main>
-        <footer>
-            <h2>Last Modified:</h2>
-            <p id="DynamicDate">dynamic date</p>
-            <p id="copy">&copy; James Green</p>
-        </footer>
-        <script src="../scripts/basic.js"></script>
-        <script src="scripts/bom.js"></script>
-
-    </body>
+    <footer>
+        <h2>Last Modified:</h2>
+        <p id="DynamicDate">dynamic date</p>
+        <p id="copy">&copy; James Green</p>
+    </footer>
+    <script src="../scripts/basic.js"></script>
+    <script src="scripts/bom.js"></script>
+</body>
 
 </html>
