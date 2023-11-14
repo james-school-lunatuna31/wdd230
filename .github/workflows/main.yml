@@ -13,7 +13,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Validate HTML and CSS
+    - name: Validate HTML
       run: |
-        docker run -v ${{ github.workspace }}:/app -w /app validator/validator:latest *.html
-        docker run -v ${{ github.workspace }}:/app -w /app validator/validator:latest *.css
+        docker run -v ${{ github.workspace }}:/app -w /app w3c/validator:latest vnu-runtime-image/bin/vnu --skip-non-html *.html
+
+    - name: Validate CSS
+      run: |
+        docker run -v ${{ github.workspace }}:/app -w /app w3c/validator:latest java -jar css-validator/css-validator.jar --warning=0 --profile=css3 *.css
