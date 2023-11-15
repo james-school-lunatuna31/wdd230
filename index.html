@@ -20,7 +20,9 @@
 
 <body>
     <header>
-        <img src="images/james-profile-photo.png" alt="Profile Image">
+        <picture>
+            <img src="images/james-profile-photo.webp" alt="Profile Image" width="208" height="244">
+        </picture>
         <h1>James Green</h1>
     </header>
     <nav>
@@ -34,6 +36,15 @@
         </ul>
     </nav>
     <main>
+        <div class="hero">
+            <picture>
+                <source media="(max-width:400px)" srcset="images/hero-small.webp">
+                <img id=hero-temple src="images/hero-medium.webp" alt="washington DC temple" width="960" height="500">
+            </picture>
+            <div class="herolabel">
+                <p>Washington D.C. Temple</p>
+            </div>
+        </div>
         <button id="dark-moder">Dark Mode</button>
         <div class="main-grid">
             <h2>WDD 230: Web Frontend Development</h2>
@@ -66,12 +77,18 @@
                     </div>
                     <ul id="info">
                         <li>Today's Weather: Sunny, 75°F</li>
-                        <li>Page Visits: 1234</li>
+                        <li>Page Visits: <span id="visits">1234</span>
+                        </li>
                         <li>Last Updated: 2023-11-2</li>
                         <li>Most Visited Page: Home</li>
                     </ul>
                 </section>
             </div>
+            <div id="map">
+                <iframe loading="lazy" width="600" height="500" id="gmap_canvas" title="map"
+                    src="https://maps.google.com/maps?q=Alexandria,%20VA&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                <!-- I didn't do a lazy load animation because that is a lot of work for something not super worth it on this site-->
+            </div> <!--The transfer goes over 500 if I have the google maps, but otherwise it doesn't.-->
         </div>
     </main>
     <footer>

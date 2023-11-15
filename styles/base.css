@@ -80,12 +80,42 @@ a {
     text-decoration: none;
 }
 
+#hero-temple {
+    width: 100%;
+    height: auto;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.herolabel {
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    max-width: 80%;
+    min-width: 20%;
+    min-height: 5%;
+    max-height: 5%;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(#fff, #4D5B97);
+    border: 1px solid rgba(0, 0, 0, .75);
+    padding: 10px;
+    font-size: smaller;
+    box-shadow: 0 0 3rem #fff;
+    opacity: 0.856;
+}
+
 .main-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 10px;
     justify-items: center;
-    margin: auto;
+    margin: 16px;
     padding: 16px;
 }
 
@@ -210,6 +240,24 @@ a {
 
 .card li a {
     color: blue;
+}
+
+#map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 4;
+    grid-column: span 3;
+    border: 2px black solid;
+    margin: 16px;
+    margin-bottom: 16px;
+    height: 100%;
+    width: 100%;
+}
+
+#map iframe {
+    height: 100%;
+    width: 100%;
 }
 
 body.darkmode {
