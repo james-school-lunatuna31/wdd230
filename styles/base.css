@@ -310,3 +310,7 @@ body.darkmode {
 .herolabel p {
     color: black;
 }
+
+.darkmode .herolabel p {
+    color: black;
+}
