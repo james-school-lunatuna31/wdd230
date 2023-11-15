@@ -43,3 +43,22 @@ d_mode.addEventListener('click', () => {
         d_mode.textContent = "Dark Mode";
     }
 });
+
+//local storage for page visits
+let page_visits = getCount() || 1;
+const count = document.getElementById("visits");
+count.textContent = page_visits.toString();
+incrementCounter();
+
+function incrementCounter() {
+    page_visits += 1;
+    setCount(page_visits);
+}
+
+function getCount() {
+    return JSON.parse(localStorage.getItem("visit-count"));
+}
+
+function setCount(amount) {
+    localStorage.setItem("visit-count", JSON.stringify(amount));
+}
