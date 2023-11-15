@@ -306,3 +306,7 @@ body.darkmode {
 .darkmode .active a {
     color: #fafafa;
 }
+
+.herolabel p {
+    color: black;
+}
