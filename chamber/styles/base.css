@@ -16,6 +16,25 @@ header {
 }
 
 /* Component Header Styles */
+.hamburger {
+    display: block;
+    margin: 8px;
+}
+
+.nav-menu {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.nav-menu.expanded {
+    opacity: 1;
+    visibility: visible;
+    max-height: 300px;
+}
+
 header nav ul {
     background-color: var(--nav-color);
     display: flex;
@@ -29,7 +48,6 @@ header nav ul {
 header nav ul li {
     display: block;
     width: 100%;
-    margin: 0;
     padding: 8px;
 }
 
@@ -40,12 +58,15 @@ header nav ul li:hover {
 }
 
 header nav ul li.active {
-    background-color: var(--header-color);
+    background-color: #b6f4ab;
     pointer-events: none;
+    border: 2px black solid;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.75);
 }
 
 header nav ul li.active a {
-    background-color: #7eb3e7;
+    background-color: #b6f4ab;
     pointer-events: none;
     color: black;
 }
