@@ -17,3 +17,8 @@ let sign_up_button = document.getElementById('signup').addEventListener('click',
         signup_response_element.innerHTML = "Invalid entry";
     }
 });
+
+// Hamburger menu
+document.querySelector('.hamburger').addEventListener('click', function () {
+    document.querySelector('.nav-menu').classList.toggle('expanded');
+});
