@@ -199,6 +199,50 @@ footer {
     padding: 8px;
 }
 
+.discovery {
+    width: 100%;
+    margin: 0;
+}
+
+.discovery .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.discovery #column1 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px;
+}
+
+.discovery #column2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px;
+}
+
+.discovery .borderedsection {
+    margin: 8px;
+    padding: 8px;
+    border: 5px rgb(174, 167, 167) solid;
+    background-color: white;
+}
+
+.discovery .borderedsection h3 {
+    color: black;
+}
+
+.discovery .borderedsection p {
+    color: black;
+}
+
+.discovery .right-col img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
 /* Variable dictionary */
 :root {
     --background-color: #002147;
