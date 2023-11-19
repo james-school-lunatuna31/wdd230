@@ -26,7 +26,7 @@ document.querySelector('.hamburger').addEventListener('click', function () {
 });
 
 // discovery
-if (window.location.pathname === '/chamber/disocvery.html') {
+if (window.location.pathname === '/chamber/disocver.html') {
     function addToLocalStorage(key, variable) {
         localStorage.setItem(key, JSON.stringify(variable));
     }
