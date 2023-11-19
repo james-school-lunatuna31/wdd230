@@ -42,50 +42,76 @@
     <main>
         <div class="discovery">
             <div class="main">
-                <div id="column1">
-                    <section class="borderedsection">
-                        <h3>
-                            heading 3
-                        </h3>
-                        <p>
-                            this is a test
-                        </p>
-                    </section>
-                    <section class="borderedsection">
-                        <h3>
-                            heading 3
-                        </h3>
-                        <picture><img src="../week03/images/lazy-image-400x600(2).png" alt="placeholder"></picture>
-                        <p>
-                            this is a test
-                        </p>
-                    </section>
-                </div>
-                <div id="column2">
-                    <picture>
-                        <source media="(max-width: 599px)" srcset="images/discovery/event1-small.webp"><img
-                            src="images/discovery/event1-large.webp" alt="Local Event 1"></source>
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 599px)" srcset="images/discovery/event2-small.webp"><img
-                            src="images/discovery/event2-large.webp" alt="Local Event 2"></source>
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 599px)" srcset="images/discovery/event3-small.webp"><img
-                            src="images/discovery/event3-large.webp" alt="Local Event 3"></source>
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 599px)" srcset="images/discovery/event4-small.webp"><img
-                            src="images/discovery/event4-large.webp" alt="Local Event 4"></source>
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 599px)" srcset="images/discovery/event5-small.webp"><img
-                            src="images/discovery/event5-large.webp" alt="Local Event 5"></source>
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 599px)" srcset="images/discovery/event6-small.webp"><img
-                            src="images/discovery/event6-large.webp" alt="Local Event 6"></source>
-                    </picture>
+                <div class="columns-container">
+                    <div id="column1">
+                        <section class="borderedsection">
+                            <h3>
+                                heading 3
+                            </h3>
+                            <p>
+                                this is a test
+                            </p>
+                        </section>
+                        <section class="borderedsection">
+                            <h3>Page Stats</h3>
+                            <p id="totalvisits">Total Visits</p>
+                            <p id="lastvisited">Last Visited On: </p>
+                            <p id="visitmessage">Visit Message</p>
+                        </section>
+                        <section class="borderedsection">
+                            <h3>
+                                heading 3
+                            </h3>
+                            <picture><img src="../week03/images/lazy-image-400x600(2).png" alt="placeholder"></picture>
+                            <p>
+                                this is a test
+                            </p>
+                        </section>
+                    </div>
+                    <div id="column2">
+                        <picture class="discoveryimage">
+                            <div class="discoveryimagelabel">
+                                <p>Respected Police</p>
+                            </div>
+                            <source media="(max-width: 599px)" srcset="images/discovery/event1-small.webp">
+                            <img class="discovery image" src="images/discovery/event1-large.webp" alt="Local Event 1">
+                        </picture>
+                        <picture class="discoveryimage">
+                            <div class="discoveryimagelabel">
+                                <p>Retirement Options</p>
+                            </div>
+                            <source media="(max-width: 599px)" srcset="images/discovery/event2-small.webp">
+                            <img class="discovery image" src="images/discovery/event2-large.webp" alt="Local Event 2">
+                        </picture>
+                        <picture class="discoveryimage">
+                            <source media="(max-width: 599px)" srcset="images/discovery/event3-small.webp">
+                            <div class="discoveryimagelabel">
+                                <p>Local Parades and Events</p>
+                            </div><img class="discovery image" src="images/discovery/event3-large.webp"
+                                alt="Local Event 3">
+                        </picture>
+                        <picture class="discoveryimage">
+                            <source media="(max-width: 599px)" srcset="images/discovery/event4-small.webp">
+                            <div class="discoveryimagelabel">
+                                <p>Live Concerts</p>
+                            </div><img class="discovery image" src="images/discovery/event4-large.webp"
+                                alt="Local Event 4">
+                        </picture>
+                        <picture class="discoveryimage">
+                            <source media="(max-width: 599px)" srcset="images/discovery/event5-small.webp">
+                            <div class="discoveryimagelabel">
+                                <p>Community Participation</p>
+                            </div><img class="discovery image" src="images/discovery/event5-large.webp"
+                                alt="Local Event 5">
+                        </picture>
+                        <picture class="discoveryimage">
+                            <source media="(max-width: 599px)" srcset="images/discovery/event6-small.webp">
+                            <div class="discoveryimagelabel">
+                                <p>Historic Buildings</p>
+                            </div><img class="discovery image" src="images/discovery/event6-large.webp"
+                                alt="Local Event 6">
+                        </picture>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,7 +121,7 @@
         <p>James G. 703-555-9292</p>
         <p id="DynamicLastModified">Last Modified: Null</p>
     </footer>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/script.js" defer></script>
 </body>
 
 </html>
