@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Green - WDD 230 - Web Frontend Development - Week 04 - HTML Forms</title>
+    <meta property="og:title" content="James Green - WDD 230 - Web Frontend Development - Week 04 - HTML Forms">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://james-school-lunatuna31.github.io/wdd230/week04/htmlforms.html">
+    <meta name="description"
+        content="James Green - WDD 230 - Web Frontend Development - Week04 Learning Activities - HTML Forms">
+    <meta name="author" content="James Green">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/learning-activity-base.css">
+    <link rel="stylesheet" href="../week04/styles/base.css">
+    <link rel="stylesheet" href="../week04/styles/larger.css">
+
+    <link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Learning Activities</h1>
+        <nav>
+            <ul>
+                <li><a href="https://james-school-lunatuna31.github.io/wdd230/week04/w4-LA-CSSPseduo.html">CSS
+                        Pseudoclasses</a></li>
+                <li class="direct"><a href="../week04/images/css-combinators.png">CSS Combinators</a></li>
+                <li><a href="https://james-school-lunatuna31.github.io/wdd230/week04/tablebuild.html">HTML Tables</a>
+                </li>
+                <li class="active"><a href="https://james-school-lunatuna31.github.io/wdd230/week04/htmlforms.html">HTML
+                        Forms</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Course Proposal Application</h1>
+        <form method="get" action="thanks.html">
+            <fieldset>
+                <legend>Application Legend</legend>
+                <label class="top">
+                    First Name*<input type="text" name="fname" required>
+                </label>
+                <label class="top">
+                    Last Name*<input type="text" name="lname" required>
+                </label>
+                <label class="top">
+                    Last Name<input type="tel" name="phone" placeholder="1235551234">
+                </label>
+                <label class="top">
+                    Email<input type="email" name="email" placeholder="someone@example.com" required>
+                </label>
+                <label class="top">
+                    Website<input type="url" name="url" placeholder="http://">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Course Information</legend>
+                <div>Audience</div>
+                <label class="sbs"><input type="radio" name="audience" value="beginner">Beginner</label>
+                <label class="sbs"><input type="radio" name="audience" value="intermediate">Intermediate</label>
+                <label class="sbs"><input type="radio" name="audience" value="beginner">Expert</label>
+                <div>Software Needed</div>
+                <label class="sbs"><input type="checkbox" name="editing" value="yes">Photo
+                    Editing</label>
+                <label class="sbs"><input type="checkbox" name="code" value="yes">Coding</label>
+                <label class="sbs"><input type="checkbox" name="process" value="yes">Preprocessor</label>
+                <label class="sbs"><input type="checkbox" name="client" value="yes">FTP
+                    Client</label>
+            </fieldset>
+            <fieldset>
+                <legend>Funding</legend>
+                <label class="top">Anticipated Completion Date <input type="date" name="completedDate"></label>
+                <label class="top">Course Subject <select name="subject">
+                        <option value="">Please Select &#9662;</option>
+                        <option value="computerScience">Computer Science</option>
+                        <option value="cyberSecurity">Cyber Security</option>
+                        <option value="dataScience">Data Science</option>
+                        <option value="informationTechnology">Information Technology</option>
+                        <option value="mobileDevelopment">Mobile Development</option>
+                        <option value="networking">Networking</option>
+                        <option value="softwareDevelopment">Software Development</option>
+                        <option value="webDevelopment">Web Development</option>
+                    </select></label>
+                <label class="top">How Many Authors <input type="number" name="authors"></label>
+            </fieldset>
+            <input class="submitBtn" type="submit" value="Propose My Course">
+        </form>
+    </main>
+    <footer>
+        <h2>Last Modified:</h2>
+        <p id="DynamicDate">dynamic date</p>
+        <p id="copy">&copy; James Green</p>
+    </footer>
+    <script src="../scripts/basic.js"></script>
+</body>
+
+</html>

@@ -76,6 +76,7 @@ li.direct {
 
 li.direct:hover {
     background-color: rgb(76, 94, 100);
+    cursor: pointer;
 }
 
 .active a {
@@ -118,6 +119,7 @@ li.disabled:hover {
     border-left: 1.5px coral solid;
     border-right: 1.5px coral solid;
     border-bottom: 3px coral solid;
+    cursor: pointer;
 }
 
 li.disabled:hover a {
