@@ -6,6 +6,14 @@
     box-sizing: border-box;
 }
 
+main a {
+    color: blue;
+}
+
+main a:hover {
+    color: purple;
+}
+
 header,
 footer {
     background-color: #333;
@@ -46,17 +54,20 @@ nav ul {
 .active {
     background-color: #9ad99a;
     box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+
+}
+
+.active a {
+    text-decoration: underline;
+    pointer-events: none;
 }
 
 .active:hover {
     box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4);
     background-color: #9ad99a;
-    border-top: 3px #333 solid;
-    border-left: 1.5px #333 solid;
-    border-right: 1.5px #333 solid;
-    border-bottom: 3px #333 solid;
+    pointer-events: none;
     cursor: default;
-
 }
 
 li.direct {
@@ -77,6 +88,86 @@ li.direct:hover {
     color: #333;
     cursor: default;
 }
+
+li.disabled {
+    background-color: rgb(186, 73, 73);
+    cursor: default;
+    position: relative;
+}
+
+li.disabled a {
+    pointer-events: none;
+    color: black;
+    position: relative;
+}
+
+li.disabled a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: transparent;
+    transition: color 0.3s ease;
+}
+
+li.disabled:hover {
+    background-color: rgb(87, 3, 3);
+    border-top: 3px coral solid;
+    border-left: 1.5px coral solid;
+    border-right: 1.5px coral solid;
+    border-bottom: 3px coral solid;
+}
+
+li.disabled:hover a {
+    color: black;
+}
+
+li.disabled:hover a::after {
+    content: "Not Available";
+    color: coral;
+}
+
+li.direct {
+    background-color: rgb(129, 185, 204);
+    cursor: default;
+    position: relative;
+}
+
+li.direct a {
+    color: black;
+    position: relative;
+}
+
+li.direct a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: transparent;
+    transition: color 0.3s ease;
+}
+
+li.direct:hover {
+    background-color: rgb(76, 94, 100);
+    border-top: 3px lightblue solid;
+    border-left: 1.5px lightblue solid;
+    border-right: 1.5px lightblue solid;
+    border-bottom: 3px lightblue solid;
+}
+
+li.direct:hover a {
+    color: black;
+}
+
+li.direct:hover a::after {
+    content: "Click to View Image";
+    color: lightblue;
+}
+
 
 
 nav ul li {
