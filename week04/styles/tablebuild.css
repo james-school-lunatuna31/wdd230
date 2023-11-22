@@ -1,0 +1,28 @@
+.activity {
+    margin: 8px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px black solid;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ccc;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px black solid;
+}
+
+table * {
+    margin: 0px;
+    padding: 4px;
+    text-align: center;
+}
+
+thead tr th {
+    color: white;
+    background-color: black;
+}

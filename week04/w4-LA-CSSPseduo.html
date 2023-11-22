@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Green - WDD 230 - Web Frontend Development - Week 04 - CSS Pseudoclasses</title>
+    <meta property="og:title" content="James Green - WDD 230 - Web Frontend Development - Week 04 - CSS Pseudoclasses">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://james-school-lunatuna31.github.io/wdd230/week04">
+    <meta name="description"
+        content="James Green - WDD 230 - Web Frontend Development - Week04 Learning Activities - CSS Pseudoclasses">
+    <meta name="author" content="James Green">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/learning-activity-base.css">
+    <link rel="icon" href="../favicon.ico">
+    <style>
+        #activity * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #activity #body {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #activity #main {
+            margin: 0;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 0.5rem;
+            width: 760px;
+            background-color: #eee;
+        }
+
+        #activity .datatable {
+            width: 200px;
+            margin-top: 2rem;
+        }
+
+        /* Activity Code */
+
+        #activity .row {
+            display: grid;
+            grid-template-columns: 100px 100px;
+            align-items: center;
+            text-align: center;
+        }
+
+        #activity .row:last-child {
+            border-bottom: var(--activity-bord);
+            margin-bottom: 8px;
+            background-color: #ccc;
+        }
+
+        #activity .col {
+            padding: 10px;
+            border-top: var(--activity-bord);
+            border-left: var(--activity-bord);
+        }
+
+        #activity .col:nth-child(even) {
+            padding: 10px;
+            border-right: var(--activity-bord);
+
+        }
+
+        #activity a {
+            color: navy;
+        }
+
+        #activity a:hover {
+            color: purple;
+        }
+
+        :root {
+            --activity-bord: 1px black solid;
+        }
+
+        body {
+            margin: 8px;
+        }
+
+        main * {
+            margin: 8px;
+        }
+
+        #activity {
+            border: 1px black solid;
+        }
+    </style>
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Learning Activities</h1>
+        <nav>
+            <ul>
+                <li class="active"><a
+                        href="https://james-school-lunatuna31.github.io/wdd230/week04/w4-LA-CSSPseduo.html">CSS
+                        Pseudoclasses</a></li>
+                <li class="direct"><a href="../week04/images/css-combinators.png">CSS Combinators</a></li>
+                <li><a href="https://james-school-lunatuna31.github.io/wdd230/week04/tablebuild.html">HTML Tables</a>
+                </li>
+                <li><a href="https://james-school-lunatuna31.github.io/wdd230/week04/htmlforms.html">HTML Forms</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>CSS Pseduo Classes</h2>
+        <p>
+            <a href="https://codepen.io/james-school-lunatuna31/pen/XWOEozv">Code Pen Submission</a>
+        </p>
+        <div id="activity">
+            <div id="body">
+                <h2>Pseudo-class Fun</h2>
+                <div id="main">
+                    <p>Anchor Tag: <a href="https://churchofjesuschrist.org" target="_blank">The Church of Jesus Christ
+                            of
+                            Latter-day Saints</a></p>
+
+                    <div class="datatable">
+                        <div class="row">
+                            <div class="col">1-1</div>
+                            <div class="col">1-2</div>
+                        </div>
+                        <div class="row">
+                            <div class="col">2-1</div>
+                            <div class="col">2-2</div>
+                        </div>
+                        <div class="row">
+                            <div class="col">3-1</div>
+                            <div class="col">3-2</div>
+                        </div>
+                    </div>
+                    <p>The borders on this "table"'s cells (.col) should not double up on each other.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h2>Last Modified:</h2>
+        <p id="DynamicDate">dynamic date</p>
+        <p id="copy">&copy; James Green</p>
+    </footer>
+    <script src="../scripts/basic.js"></script>
+</body>
+
+</html>
