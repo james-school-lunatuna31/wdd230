@@ -18,19 +18,19 @@ jobs:
   
   Validate-CSS:
     runs-on: ubuntu-latest
-
+  
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-
+  
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '14'
-
+  
     - name: Install w3c-css validator
       run: npm install -g w3c-css
-
+  
     - name: Find and Validate CSS files
       run: |
-        find . -name '*.css' -not -path './node_modules/*' -exec echo "Validating {}" \; -exec w3c-css --input '{}' \;
+        find . -name '*.css' -not -path './node_modules/*' -exec echo "Validating {}" \; -exec w3c-css --validator https://jigsaw.w3.org/css-validator/validator --input '{}' \; -exec sleep 1.5 \;
