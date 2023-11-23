@@ -26,24 +26,34 @@ jobs:
         const fs = require('fs');
         const path = require('path');
         const validator = require('w3c-css');
-        const directoryPath = path.join(__dirname, 'path-to-your-css-directory');
     
-        fs.readdir(directoryPath, function (err, files) {
-          if (err) {
-            return console.log('Unable to scan directory: ' + err);
-          } 
-          files.forEach(function (file) {
-            if (file.endsWith('.css')) {
-              validator.validate(directoryPath + '/' + file, function(err, data) {
-                if (err) {
-                  console.error(err);
-                } else {
-                  console.log('Validation errors', data.errors);
-                  console.log('Validation warnings', data.warnings);
-                }
-              });
+        function validateCSS(directoryPath) {
+          fs.readdir(directoryPath, { withFileTypes: true }, (err, entries) => {
+            if (err) {
+              console.error('Error reading directory:', err);
+              return;
             }
+            entries.forEach(entry => {
+              const fullPath = path.join(directoryPath, entry.name);
+              if (entry.isDirectory()) {
+                validateCSS(fullPath);
+              } else if (entry.isFile() && fullPath.endsWith('.css')) {
+                validator.validate(fullPath, function(err, data) {
+                  if (err) {
+                    console.error('Error validating:', fullPath, err);
+                  } else {
+                    console.log('File:', fullPath);
+                    console.log('Validation errors:', data.errors);
+                    console.log('Validation warnings:', data.warnings);
+                  }
+                });
+              }
+            });
           });
-        });"
+        }
+    
+        validateCSS('.');
+        "
+
 
         
