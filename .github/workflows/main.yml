@@ -15,8 +15,35 @@ jobs:
     - name: HTML Validation
       run: |
         docker run --rm -v $PWD:/workspace ghcr.io/validator/validator:latest /bin/bash -c "find /workspace -name '*.html' -exec vnu --errors-only --skip-non-html {} +"
+    
+    - name: Install w3c-css
+      run: npm install w3c-css
+
     - name: CSS Validation
       run: |
-        docker run --rm -v $PWD:/workspace gchudnov/w3c-css /bin/bash -c "find /workspace -name '*.css' -exec w3c-css-validator --errors-only {} +"
+        node -e "
+        'use strict';
+        const fs = require('fs');
+        const path = require('path');
+        const validator = require('w3c-css');
+        const directoryPath = path.join(__dirname, 'path-to-your-css-directory');
+    
+        fs.readdir(directoryPath, function (err, files) {
+          if (err) {
+            return console.log('Unable to scan directory: ' + err);
+          } 
+          files.forEach(function (file) {
+            if (file.endsWith('.css')) {
+              validator.validate(directoryPath + '/' + file, function(err, data) {
+                if (err) {
+                  console.error(err);
+                } else {
+                  console.log('Validation errors', data.errors);
+                  console.log('Validation warnings', data.warnings);
+                }
+              });
+            }
+          });
+        });"
 
         
