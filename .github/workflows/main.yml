@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches: [ ** ]
 
 jobs:
   Validate-HTML:
@@ -16,3 +16,8 @@ jobs:
     - name: HTML Validation
       run: |
         docker run --rm -v $PWD:/workspace ghcr.io/validator/validator:latest /bin/bash -c "find /workspace -name '*.html' -exec vnu --errors-only --skip-non-html {} +"
+    - name: CSS Validation
+      run: |
+        docker run --rm -v $PWD:/workspace gchudnov/w3c-css /bin/bash -c "find /workspace -name '*.css' -exec w3c-css-validator --errors-only {} +"
+
+        
