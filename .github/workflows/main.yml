@@ -16,8 +16,8 @@ jobs:
       run: |
         docker run --rm -v $PWD:/workspace ghcr.io/validator/validator:latest /bin/bash -c "find /workspace -name '*.html' -exec vnu --errors-only --skip-non-html {} +"
     
-    - name: Install w3c-css
-      run: npm install w3c-css
+    - name: Install w3c-css and dependencies
+      run: npm install w3c-css async
 
     - name: CSS Validation
       run: |
@@ -25,35 +25,46 @@ jobs:
         'use strict';
         const fs = require('fs');
         const path = require('path');
+        const async = require('async');
         const validator = require('w3c-css');
-    
-        function validateCSS(directoryPath) {
-          fs.readdir(directoryPath, { withFileTypes: true }, (err, entries) => {
-            if (err) {
-              console.error('Error reading directory:', err);
-              return;
+
+        function findAllCSSFiles(dir, fileList = []) {
+          const files = fs.readdirSync(dir);
+          files.forEach(file => {
+            const fullPath = path.join(dir, file);
+            if (fs.statSync(fullPath).isDirectory()) {
+              findAllCSSFiles(fullPath, fileList);
+            } else if (fullPath.endsWith('.css')) {
+              fileList.push(fullPath);
             }
-            entries.forEach(entry => {
-              const fullPath = path.join(directoryPath, entry.name);
-              if (entry.isDirectory()) {
-                validateCSS(fullPath);
-              } else if (entry.isFile() && fullPath.endsWith('.css')) {
-                validator.validate(fullPath, function(err, data) {
-                  if (err) {
-                    console.error('Error validating:', fullPath, err);
-                  } else {
-                    console.log('File:', fullPath);
-                    console.log('Validation errors:', data.errors);
-                    console.log('Validation warnings:', data.warnings);
-                  }
-                });
+          });
+          return fileList;
+        }
+
+        const cssFiles = findAllCSSFiles('.'); // '.' starts from the root of your repository
+
+        async.eachSeries(cssFiles, function(file, next) {
+          fs.readFile(file, 'utf8', function(err, cssContent) {
+            if (err) {
+              console.error('Error reading file:', file, err);
+              return next(err);
+            }
+
+            validator.validate({ text: cssContent }, function(err, data) {
+              if(err) {
+                console.error('Failed to process:', file, err);
+              } else {
+                console.log('Validation errors in', file, data.errors);
+                console.log('Validation warnings in', file, data.warnings);
               }
+              setTimeout(() => next(err), 1500); // 1.5-second delay between requests
             });
           });
-        }
-    
-        validateCSS('.');
+        }, function(err) {
+          if(err) {
+            console.error('Failed to process a CSS file:', err);
+          } else {
+            console.log('All CSS files have been processed successfully');
+          }
+        });
         "
-
-
-        
