@@ -15,65 +15,34 @@ jobs:
     - name: HTML Validation
       run: |
         docker run --rm -v $PWD:/workspace ghcr.io/validator/validator:latest /bin/bash -c "find /workspace -name '*.html' -exec vnu --errors-only --skip-non-html {} +"
-    
-    - name: Install w3c-css and dependencies
-      run: npm install w3c-css async
-
-    - name: CSS Validation
+  
+  Validate-Css:
+    runs-on: ubuntu-latest
+  
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+  
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+  
+    - name: Install w3c-css validator
+      run: npm install -g w3c-css
+  
+    - name: Find CSS files
+      id: css-files
       run: |
-        node -e "
-        'use strict';
-        const fs = require('fs');
-        const path = require('path');
-        const async = require('async');
-        const validator = require('w3c-css');
-
-        function findAllCSSFiles(dir, fileList = []) {
-          const files = fs.readdirSync(dir);
-          files.forEach(file => {
-            const fullPath = path.join(dir, file);
-            if (fs.statSync(fullPath).isDirectory()) {
-              findAllCSSFiles(fullPath, fileList);
-            } else if (fullPath.endsWith('.css')) {
-              console.log('Found CSS file:', fullPath); // Log the discovery of a CSS file
-              fileList.push(fullPath);
-            }
-          });
-          return fileList;
-        }
-
-        const cssFiles = findAllCSSFiles('.');
-        let hasErrors = false;
-
-        async.eachSeries(cssFiles, function(file, next) {
-          fs.readFile(file, 'utf8', function(err, cssContent) {
-            if (err) {
-              console.error('Error reading file:', file, err);
-              return next(err);
-            }
-
-            console.log('Reading file:', file); // Log the file being read
-
-            validator.validate({ text: cssContent }, function(err, data) {
-              if(err) {
-                console.error('Failed to process:', file, err);
-                hasErrors = true;
-              } else {
-                if (data.errors.length > 0) {
-                  console.log('Validation errors in', file, data.errors);
-                  hasErrors = true;
-                }
-                console.log('Validation warnings in', file, data.warnings);
-              }
-              setTimeout(() => next(err), 1500); // 1.5-second delay between requests
-            });
-          });
-        }, function(err) {
-          if (err || hasErrors) {
-            console.error('Failed to process one or more CSS files.');
-            process.exit(1); // Exit with a non-zero status to fail the workflow
-          } else {
-            console.log('All CSS files have been processed successfully');
-          }
-        });
-        "
+        css_files=$(find . -name '*.css' -not -path "./node_modules/*")
+        css_files="${css_files//'%'/'%25'}"
+        css_files="${css_files//$'\n'/'%0A'}"
+        css_files="${css_files//$'\r'/'%0D'}"
+        echo "::set-output name=files::$css_files"
+  
+    - name: Validate CSS
+      run: |
+        for file in ${{ steps.css-files.outputs.files }}; do
+          echo "Validating $file"
+          w3c-css --input "$file"
+        done
