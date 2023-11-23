@@ -35,6 +35,7 @@ jobs:
             if (fs.statSync(fullPath).isDirectory()) {
               findAllCSSFiles(fullPath, fileList);
             } else if (fullPath.endsWith('.css')) {
+              console.log('Found CSS file:', fullPath); // Log the discovery of a CSS file
               fileList.push(fullPath);
             }
           });
@@ -50,6 +51,8 @@ jobs:
               console.error('Error reading file:', file, err);
               return next(err);
             }
+
+            console.log('Reading file:', file); // Log the file being read
 
             validator.validate({ text: cssContent }, function(err, data) {
               if(err) {
