@@ -14,6 +14,10 @@ body {
     padding: 20px;
 }
 
+main {
+    margin-bottom: 1.5rem;
+}
+
 header,
 footer {
     background-color: #333;
@@ -47,11 +51,11 @@ nav ul {
 
 nav ul li {
     padding: 10px;
-    background-color: #ccc;
-    border-top: 3px #f4f4f4 solid;
-    border-left: 1.5px #f4f4f4 solid;
-    border-right: 1.5px #f4f4f4 solid;
-    border-bottom: 3px #f4f4f4 solid;
+    background-color: var(--linkable-item-border);
+    border-top: 3px var(--link-hover-color) solid;
+    border-left: 1.5px var(--link-hover-color) solid;
+    border-right: 1.5px var(--link-hover-color) solid;
+    border-bottom: 3px var(--link-hover-color) solid;
 
     width: 100%;
     cursor: pointer;
@@ -63,16 +67,16 @@ nav ul li a {
 }
 
 nav ul li:hover {
-    background-color: #a9a6a6;
-    border-top: 3px #b4c1fd solid;
-    border-left: 1.5px #b4c1fd solid;
-    border-right: 1.5px #b4c1fd solid;
-    border-bottom: 3px #b4c1fd solid;
+    background-color: var(--linkable-item-background-hover);
+    border-top: 3px var(--linkable-item-hover) solid;
+    border-left: 1.5px var(--linkable-item-hover) solid;
+    border-right: 1.5px var(--linkable-item-hover) solid;
+    border-bottom: 3px var(--linkable-item-hover) solid;
     box-sizing: border-box;
 }
 
 nav ul li:hover a {
-    color: #f4f4f4;
+    color: var(--link-hover-color);
 }
 
 a {
@@ -282,7 +286,7 @@ body.darkmode {
 }
 
 .darkmode nav ul li {
-    background-color: #ccc;
+    background-color: var(--linkable-item-border);
     border-top: 3px #444242 solid;
     border-left: 1.5px #444242 solid;
     border-right: 1.5px #444242 solid;
@@ -291,11 +295,11 @@ body.darkmode {
 }
 
 .darkmode nav ul li:hover {
-    background-color: #a9a6a6;
-    border-top: 3px #b4c1fd solid;
-    border-left: 1.5px #b4c1fd solid;
-    border-right: 1.5px #b4c1fd solid;
-    border-bottom: 3px #b4c1fd solid;
+    background-color: var(--linkable-item-background-hover);
+    border-top: 3px var(--linkable-item-hover) solid;
+    border-left: 1.5px var(--linkable-item-hover) solid;
+    border-right: 1.5px var(--linkable-item-hover) solid;
+    border-bottom: 3px var(--linkable-item-hover) solid;
     box-sizing: border-box;
 }
 
@@ -313,4 +317,92 @@ body.darkmode {
 
 .darkmode .herolabel p {
     color: black;
+}
+
+.form * {
+    -webkit-apperance: none;
+}
+
+.form fieldset {
+    margin-bottom: 1.5rem;
+    padding: 1rem 1rem;
+    border: 1px rgb(94, 94, 193) solid;
+    border-radius: 10px;
+}
+
+.form fieldset>legend {
+    color: rgb(94, 94, 193);
+    margin: 0 1rem;
+    padding: 0 .75rem;
+}
+
+.form fieldset>label {
+    display: block;
+    color: Black;
+}
+
+.form fieldset>label>input {
+    display: block;
+    margin-bottom: 1rem;
+    min-height: 44px;
+    height: 1rem;
+    border-radius: 5px;
+    padding-left: 0.75rem;
+}
+
+.form fieldset>label>input[type=text],
+input[type=password],
+input[type=email] {
+    background-color: #ebe7e7;
+}
+
+.form fieldset>label>input:required {
+    border: 1px lightslategrey solid;
+    border-left: 6px red solid;
+}
+
+.form fieldset>label>input:required:valid {
+    border-left: 6px rgb(53, 135, 36) solid;
+}
+
+.form span.form-required {
+    color: red;
+}
+
+.form label>input[type=range] {
+    padding-left: 0;
+    margin-bottom: 0;
+    height: 44px;
+}
+
+.form input[type=submit] {
+    border: 2px solid var(--linkable-item-border);
+    background-color: var(--linkable-item-border);
+    color: black;
+    border-radius: 1rem;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 96%;
+    max-width: 20rem;
+    box-sizing: border-box;
+}
+
+.form input[type=submit]:hover {
+    background-color: var(--linkable-item-background-hover);
+    border: 2px solid;
+    border-color: var(--linkable-item-hover);
+    color: var(--link-hover-color);
+    box-sizing: border-box;
+}
+
+input.recheck {
+    background-color: rgba(255, 100, 100, 0.5) !important;
+    border: 2px solid rgb(240, 90, 90) !important;
+}
+
+:root {
+    --link-hover-color: #f4f4f4;
+    --linkable-item-border: #ccc;
+    --linkable-item-hover: #b4c1fd;
+    --linkable-item-background-hover: #a9a6a6;
 }
