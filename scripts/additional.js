@@ -62,3 +62,4 @@ function getCount() {
 function setCount(amount) {
     localStorage.setItem("visit-count", JSON.stringify(amount));
 }
+
