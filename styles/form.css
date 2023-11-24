@@ -1,0 +1,87 @@
+.form * {
+    -webkit-apperance: none;
+}
+
+.form fieldset {
+    margin-bottom: 1.5rem;
+    padding: 1rem 1rem;
+    border: 1px rgb(94, 94, 193) solid;
+    border-radius: 10px;
+}
+
+.form fieldset>legend {
+    color: rgb(94, 94, 193);
+    margin: 0 1rem;
+    padding: 0 .75rem;
+}
+
+.form fieldset>label {
+    display: block;
+    color: Black;
+}
+
+.form fieldset>label>input {
+    display: block;
+    margin-bottom: 1rem;
+    min-height: 44px;
+    height: 1rem;
+    border-radius: 5px;
+    padding-left: 0.75rem;
+}
+
+.form fieldset>label>input[type=text],
+input[type=password],
+input[type=email] {
+    background-color: #ebe7e7;
+}
+
+.form fieldset>label>input:required {
+    border: 1px lightslategrey solid;
+    border-left: 6px red solid;
+}
+
+.form fieldset>label>input:required:valid {
+    border-left: 6px rgb(53, 135, 36) solid;
+}
+
+.form span.form-required {
+    color: red;
+}
+
+.form label>input[type=range] {
+    padding-left: 0;
+    margin-bottom: 0;
+    height: 44px;
+}
+
+.form input[type=submit] {
+    border: 2px solid var(--linkable-item-border);
+    background-color: var(--linkable-item-border);
+    color: black;
+    border-radius: 1rem;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 96%;
+    max-width: 20rem;
+    box-sizing: border-box;
+}
+
+.form input[type=submit]:hover {
+    background-color: var(--linkable-item-background-hover);
+    border: 2px solid;
+    border-color: var(--linkable-item-hover);
+    color: var(--link-hover-color);
+    box-sizing: border-box;
+}
+
+input.recheck {
+    background-color: rgba(255, 100, 100, 0.5) !important;
+    border: 2px solid rgb(240, 90, 90) !important;
+}
+
+:root {
+    --link-hover-color: #f4f4f4;
+    --linkable-item-border: #ccc;
+    --linkable-item-hover: #b4c1fd;
+    --linkable-item-background-hover: #a9a6a6;
+}
