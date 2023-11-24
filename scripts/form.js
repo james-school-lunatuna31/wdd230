@@ -12,7 +12,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
     const emailPattern = email.pattern;
     password.classList.remove('recheck');
     confirmPassword.classList.remove('recheck');
-    password.classList.remove('recheck');
+    email.classList.remove('recheck');
     if (password.value !== confirmPassword.value) {
         event.preventDefault();
         alert('Passwords do not match.');
