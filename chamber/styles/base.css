@@ -371,12 +371,11 @@ input.titlecheck {
 }
 
 .form fieldset>label>input:required {
-    border: 1px lightslategrey solid;
-    border-left: 6px red solid;
+    box-shadow: 0 0 8px red;
 }
 
 .form fieldset>label>input:required:valid {
-    border-left: 6px rgb(53, 135, 36) solid;
+    box-shadow: 0 0 8px green;
 }
 
 

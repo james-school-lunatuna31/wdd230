@@ -22,6 +22,8 @@ if (window.location.pathname.endsWith('join.html')) {
             });
         });
 
+
+
         firstName.classList.remove('recheck');
         lastName.classList.remove('recheck');
         title.classList.remove('recheck');
