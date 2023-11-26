@@ -383,11 +383,6 @@ input.titlecheck {
     flex-direction: column;
 }
 
-.membership-level>span {
-    margin: 0;
-    padding: 0;
-}
-
 .tier {
     display: none;
     position: relative;
