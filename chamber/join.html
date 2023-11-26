@@ -68,14 +68,42 @@
                     Organization:<span class="form-required">*</span>
                     <input type="text" id="organization" name="organization" required>
                 </label>
+                <h2>Membership Level:</h2>
+                <div class="membership-level">
+                    <div class="tier visible" id="np" style="position: relative;">
+                        <h3>NP Membership (Free)</h3>
+                        <p class="description">The NP Membership is our basic level, providing access to our networking
+                            events and online resources.</p>
+                        <p class="perks">Perks: Access to networking events, online resources</p>
+                    </div>
+                    <div class="tier" id="bronze" style="position: relative;">
+                        <h3>Bronze Membership ($15)</h3>
+                        <p class="description">The Bronze Membership includes all benefits of the NP Membership, plus
+                            additional perks.</p>
+                        <p class="perks">Perks: All benefits of NP Membership, plus access to exclusive workshops</p>
+                    </div>
+                    <div class="tier" id="silver" style="position: relative;">
+                        <h3>Silver Membership ($25)</h3>
+                        <p class="description">The Silver Membership includes all benefits of the Bronze Membership,
+                            with even more perks.</p>
+                        <p class="perks">Perks: All benefits of Bronze Membership, plus priority booking for events</p>
+                    </div>
+                    <div class="tier" id="gold" style="position: relative;">
+                        <h3>Gold Membership ($50)</h3>
+                        <p class="description">The Gold Membership is our premium level, including all benefits of the
+                            Silver Membership and more.</p>
+                        <p class="perks">Perks: All benefits of Silver Membership, plus personal business consultations
+                        </p>
+                    </div>
+                </div>
                 <label>
                     Membership Level:
-                    <select id="membership-level" name="membership-level">
+                    <select id="membership-level" name="membership-level" onchange="highlightTier(this.value)">
                         <option value="">Please select a membership...</option>
-                        <option value="np">NP Membership</option>
-                        <option value="bronze">Bronze Membership</option>
-                        <option value="silver">Silver Membership</option>
-                        <option value="gold">Gold Membership</option>
+                        <option value="np">NP Membership ($5)</option>
+                        <option value="bronze">Bronze Membership ($15)</option>
+                        <option value="silver">Silver Membership ($25)</option>
+                        <option value="gold">Gold Membership ($50)</option>
                     </select>
                 </label>
                 <label>
@@ -94,6 +122,8 @@
     </footer>
     <script src="scripts/script.js"></script>
     <script src="scripts/form.js"></script>
+    <script>
+    </script>
 </body>
 
 </html>

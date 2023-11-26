@@ -232,10 +232,31 @@
         background: none;
         border-radius: 0px;
         box-shadow: none;
-        padding: 0;
         color: rgb(19, 19, 19);
     }
 
+
+    .membership-level {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .tier {
+        float: right;
+        display: block;
+        box-sizing: border-box;
+        border: 2px solid transparent;
+        padding: 1rem;
+    }
+
+    .tier.selected {
+        border: 2px solid var(--call-to-action);
+        box-shadow: 0 0 10px var(--call-to-action);
+    }
+
+    .tier.selected .perks {
+        color: var(--font-color);
+    }
 
     /* Variable dictionary */
     :root {

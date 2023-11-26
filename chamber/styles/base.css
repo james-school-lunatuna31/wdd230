@@ -378,6 +378,19 @@ input.titlecheck {
     box-shadow: 0 0 8px green;
 }
 
+.membership-level {
+    display: flex;
+    flex-direction: column;
+}
+
+.tier {
+    display: none;
+}
+
+.tier.visible {
+    display: block;
+}
+
 
 /* Variable dictionary */
 :root {

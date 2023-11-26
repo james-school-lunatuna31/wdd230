@@ -24,6 +24,7 @@ if (window.location.pathname.endsWith('join.html')) {
 
 
 
+
         firstName.classList.remove('recheck');
         lastName.classList.remove('recheck');
         title.classList.remove('recheck');
@@ -58,6 +59,35 @@ if (window.location.pathname.endsWith('join.html')) {
             localStorage.setItem('timestamp', timestamp.value);
         }
     });
+    function highlightTier(tierId) {
+
+        var tierIdMap = {
+            'np': 'np',
+            'bronze': 'bronze',
+            'silver': 'silver',
+            'gold': 'gold'
+        };
+        var tierId = tierIdMap[tierId];
+
+        // Remove the 'selected' and 'visible' classes from all tiers
+        var tiers = document.getElementsByClassName('tier');
+        for (var i = 0; i < tiers.length; i++) {
+            tiers[i].classList.remove('selected');
+            if (window.matchMedia("(max-width: 600px)").matches && tiers[i].classList.contains('visible')) {
+                tiers[i].classList.remove('visible');
+            }
+        }
+
+        // Add the 'selected' and 'visible' classes to the selected tier
+        if (tierId) {
+            var selectedTier = document.getElementById(tierId);
+            selectedTier.classList.add('selected');
+            if (window.matchMedia("(max-width: 600px)").matches && !selectedTier.classList.contains('visible')) {
+                selectedTier.classList.add('visible');
+            }
+        }
+
+    }
 } else if (window.location.pathname.endsWith('thankyou.html')) {
     window.onload = loadFormData();
 }
