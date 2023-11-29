@@ -12,8 +12,14 @@ getLinks();
 function displayLinks(data) {
     const container = document.getElementById('learning-activities');
     let html = '';
-    data.forEach(link => {
-        html += `<li class="learning-info-item">${link.week} | <a href="${link.url}">${link.title}</a></li>`;
+    data.weeks.forEach((weekObj) => {
+        html += `<li> ${weekObj.week}`;
+        weekObj.links.forEach(link => {
+            let week_url = link.url;
+            let week_title = link.title;
+            html += ` | <a href=${repo}/${week_url}>${week_title}</a>`;
+        })
+        html += `</li>`;
     });
     container.innerHTML = html;
 }

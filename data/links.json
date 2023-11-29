@@ -1,69 +1,101 @@
 {
-  "weeks": [
-    {
-      "week": "Week 1",
-      "links": [
+    "weeks": [
         {
-          "url": "week01/holygrail.html",
-          "title": "HG Layout"
+            "week": "week01",
+            "links": [
+                {
+                    "title": "chamber-site-plan",
+                    "url": "week01/chamber-site-plan.html"
+                },
+                {
+                    "title": "holygrail",
+                    "url": "week01/holygrail.html"
+                },
+                {
+                    "title": "media-query",
+                    "url": "week01/media-query.html"
+                }
+            ]
         },
         {
-          "url": "week01/media-query.html",
-          "title": "mQueries"
-        }
-      ]
-    },
-    {
-      "week": "Week 2",
-      "links": [
-        {
-          "url": "week02/design.html",
-          "title": "Design Principles"
+            "week": "week02",
+            "links": [
+                {
+                    "title": "bom",
+                    "url": "week02/bom.html"
+                },
+                {
+                    "title": "design",
+                    "url": "week02/design.html"
+                }
+            ]
         },
         {
-          "url": "week02/bom.html",
-          "title": "BoM Activity"
-        }
-      ]
-    },
-    {
-      "week": "Week 3",
-      "links": [
-        {
-          "url": "week03/lazyload.html",
-          "title": "Lazy Loading"
+            "week": "week03",
+            "links": [
+                {
+                    "title": "webP",
+                    "url": "week03/images/webp-example-image.webp"
+                },
+                {
+                    "title": "lazyload",
+                    "url": "week03/lazyload.html"
+                },
+                {
+                    "title": "responsive-images",
+                    "url": "week03/responsive-images.html"
+                }
+                {
+                    "title": "bom",
+                    "url": "week03/bom.html"
+                }
+            ]
         },
         {
-          "url": "week03/responsive-images.html",
-          "title": "Responsive Images"
-        }
-      ]
-    },
-    {
-      "week": "Week 4",
-      "links": [
-        {
-          "url": "week04/htmlforms.html",
-          "title": "HTML Forms"
+            "week": "week04",
+            "links": [
+                {
+                    "title": "CSS-Pseudoclasses",
+                    "url": "https://codepen.io/james-school-lunatuna31/pen/XWOEozv"
+                },
+                {
+                    "title": "CSS-Combinators",
+                    "url": "week04/images/css-combinators.png"
+                },
+                {
+                    "title": "tablebuild",
+                    "url": "week04/tablebuild.html"
+                },
+                {
+                    "title": "index",
+                    "url": "week04/index.html"
+                },
+                {
+                    "title": "Better forms :)",
+                    "url": "week04/htmlforms.html"
+                }
+            ]
         },
         {
-          "url": "week04/tablebuild.html",
-          "title": "Table Building"
+            "week": "week05",
+            "links": [
+                {
+                    "title": "Pseudoelements",
+                    "url": "https://codepen.io/james-school-lunatuna31/pen/wvNEXYy"
+                },
+                {
+                    "title": "WorkingWithJSON",
+                    "url": "week05/WorkingWithJSON.html"
+                },
+                {
+                    "title": "prophets",
+                    "url": "week05/prophets.html"
+                },
+                {
+                    "title": "weather",
+                    "url": "week05/weather.html"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "week": "Week 5",
-      "links": [
-        {
-          "url": "week05/Pseudoelements.html",
-          "title": "Pseudoelements"
-        },
-        {
-          "url": "week05/WorkingWithJSON.html",
-          "title": "Working with JSON"
-        }
-      ]
-    }
-  ]
+    ]
 }
