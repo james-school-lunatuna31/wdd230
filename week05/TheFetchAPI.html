@@ -13,6 +13,66 @@
     <meta name="author" content="James Green">
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/learning-activity-base.css">
+    <Style>
+        #prophets * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #prophets body {
+            font-family: Arial, sans-serif;
+        }
+
+        #prophets .header {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f3f3f3;
+            width: 100%;
+        }
+
+        #prophets main {
+            padding: 2rem;
+        }
+
+        #prophets #cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        #prophets section {
+            background-color: #c8bfbf;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+
+        #prophets h2 {
+            font-size: 1.5em;
+            color: #333333;
+            margin-bottom: 1em;
+        }
+
+        #prophets p {
+            margin-bottom: 0.5em;
+        }
+
+        #prophets img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            border: 2px solid #333;
+            margin-top: 1em;
+        }
+
+        @media (max-width: 600px) {
+            #prophets #cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </Style>
+
     <link rel="icon" href="../favicon.ico">
 </head>
 
@@ -31,6 +91,12 @@
         </nav>
     </header>
     <main>
+        <div id="prophets">
+            <div class="header">
+                <h1> Latter Day Prophets </h1>
+            </div>
+            <div id="cards"></div>
+        </div>
     </main>
     <footer>
         <h2>Last Modified:</h2>
@@ -38,6 +104,8 @@
         <p id="copy">&copy; James Green</p>
     </footer>
     <script src="../scripts/basic.js"></script>
+    <script src="scripts/prophets.js"></script>
+
 </body>
 
 </html>
