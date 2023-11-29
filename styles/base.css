@@ -325,6 +325,12 @@ body.darkmode {
     color: black;
 }
 
+#weather {
+    display: block;
+    text-align: center;
+    border: 1px black solid;
+}
+
 :root {
     --link-hover-color: #f4f4f4;
     --linkable-item-border: #ccc;

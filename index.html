@@ -29,7 +29,6 @@
         <button class="hamburger" aria-label="Toggle menu">☰</button>
         <ul class="nav-menu">
             <li class="active"><a href="#">Home</a></li>
-            <!-- Consider adding the wayfinding later. I think I will go for some colors-->
             <li><a href="https://james-school-lunatuna31.github.io/wdd230/chamber/">Chamber</a></li>
             <li><a href="https://james-school-lunatuna31.github.io/wdd230/week01/chamber-site-plan.html">Site Plan</a>
             </li>
@@ -64,7 +63,14 @@
                         <h3>Information</h3>
                     </div>
                     <ul id="info">
-                        <li>Today's Weather: Sunny, 75°F</li>
+                        <li>Today's Weather in Alexandria is:
+                            <div id="weather">
+                                <span id="current-temp"></span>
+                                <figure id="weather-figure">
+                                    <figcaption id="caption-desc"></figcaption>
+                                </figure>
+                            </div>
+                        </li>
                         <li>Page Visits: <span id="visits">1234</span>
                         </li>
                         <li>Last Updated: 2023-11-2</li>
@@ -86,6 +92,8 @@
     <script src="scripts/getDates.js"></script>
     <script src="scripts/additional.js" defer></script>
     <script src="scripts/links.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+
 </body>
 
 </html>
