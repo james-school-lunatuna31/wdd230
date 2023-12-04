@@ -2,7 +2,7 @@
     margin: 8px;
 }
 
-/* Global Header Styles */
+
 header * {
     margin: 0px;
 }
@@ -15,7 +15,7 @@ header {
     margin: 0;
 }
 
-/* Component Header Styles */
+
 .hamburger {
     display: block;
     margin: 8px;
@@ -92,14 +92,14 @@ header nav ul li a:hover {
 
 
 
-/* Global Body Styles */
+
 body {
     background-color: var(--background-color);
     font-family: 'Roboto', 'Times New Roman', serif;
     color: var(--font-color);
 }
 
-/* Component Body Styles */
+
 body h1,
 body h2 {
     color: var(--header-color);
@@ -128,8 +128,8 @@ body a:hover {
     color: var(--link-hover-color);
 }
 
-/* Construct Body Styles */
-/* Construct Body Styles -- main grid */
+
+
 body .main-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -137,7 +137,7 @@ body .main-grid {
     box-sizing: border-box;
 }
 
-/* Construct Body Styles -- main grid -- left col */
+
 body .main-grid .left-col {
     height: 100%;
     box-sizing: border-box;
@@ -155,7 +155,7 @@ body .main-grid .left-col #join-input {
     display: flex;
 }
 
-/* Construct Body Styles -- main grid -- Right col */
+
 
 body .main-grid .right-col section img {
     max-width: 100%;
@@ -192,7 +192,7 @@ body .main-grid .right-col #news {
     box-sizing: border-box;
 }
 
-/* Footer styles */
+
 footer {
     background-color: var(--footer-background-color);
     color: var(--list-item-color);
@@ -393,7 +393,7 @@ input.titlecheck {
 }
 
 
-/* Variable dictionary */
+
 :root {
     --background-color: #002147;
     --font-color: #FFFFFF;
@@ -404,4 +404,55 @@ input.titlecheck {
     --link-hover-color: #f9d362;
     --nav-color: #699cce;
     --footer-background-color: #284262;
+}
+
+#directory .view-toggle {
+    display: none;
+}
+
+#directory .view-toggle button:hover {
+    background-color: darken(var(--call-to-action), 10%);
+}
+
+#directory #members-container,
+#directory>#members-container,
+.member-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#directory>#members-container>.member-card {
+    background-color: #ebe7e7;
+    border-radius: 5px;
+}
+
+#directory>#members-container>.member-card>img {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+
+#directory>#members-container.list-view>.member-card:nth-child(even) {
+    background-color: #3eb68a;
+    border-radius: 5px;
+}
+
+#directory>#members-container.list-view>.member-card:nth-child(even)>h2 {
+    color: #08172b;
+}
+
+
+#directory>#members-container>.member-card>h2 {
+    color: #0e4a86;
+}
+
+#directory>#members-container>.member-card>p {
+    color: black;
+}
+
+#directory>#members-container>.member-card>a {
+    color: #2f0904;
 }

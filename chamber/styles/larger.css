@@ -1,10 +1,10 @@
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
 
     * {
         margin: 8px;
     }
 
-    /* Global Header Styles */
+
     header * {
         margin: 0px;
     }
@@ -23,7 +23,7 @@
         flex-direction: row;
     }
 
-    /* Component Header Styles */
+
     .hamburger {
         display: none;
     }
@@ -94,14 +94,14 @@
     }
 
 
-    /* Global Body Styles */
+
     body {
         background-color: var(--background-color);
         font-family: 'Roboto', 'Times New Roman', serif;
         color: var(--font-color);
     }
 
-    /* Component Body Styles */
+
     body h1,
     body h2 {
         color: var(--header-color);
@@ -130,8 +130,8 @@
         color: var(--link-hover-color);
     }
 
-    /* Construct Body Styles */
-    /* Construct Body Styles -- main grid */
+
+
     body .main-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -139,7 +139,7 @@
         box-sizing: border-box;
     }
 
-    /* Construct Body Styles -- main grid -- left col */
+
     body .main-grid .left-col {
         height: 100%;
         box-sizing: border-box;
@@ -157,7 +157,7 @@
         display: flex;
     }
 
-    /* Construct Body Styles -- main grid -- Right col */
+
 
     body .main-grid .right-col section img {
         max-width: 100%;
@@ -194,7 +194,7 @@
         box-sizing: border-box;
     }
 
-    /* Footer styles */
+
     footer {
         background-color: var(--footer-background-color);
         color: var(--list-item-color);
@@ -258,7 +258,45 @@
         color: var(--font-color);
     }
 
-    /* Variable dictionary */
+    #directory .view-toggle {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #directory .view-toggle button {
+        padding: 0.5rem 1rem;
+        margin: 0 0.5rem;
+        background-color: var(--call-to-action);
+        color: black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    #directory #members-container.grid-view {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 1rem;
+        padding: 1rem;
+        justify-content: center;
+    }
+
+    #directory>#members-container>.member-card>img {
+        color: black;
+        border: 1px solid #000;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        max-width: 30%;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     :root {
         --background-color: #002147;
         --font-color: #FFFFFF;

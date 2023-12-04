@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Company Alpha",
+        "address": "5678 Market Street",
+        "phone": "555-5678",
+        "website": "https://companyalpha.example.com",
+        "image": "shape1.webp",
+        "membership_level": "Platinum",
+        "other_info": "Established in 1999."
+    },
+    {
+        "name": "Company Beta",
+        "address": "91011 Market Street",
+        "phone": "555-9101",
+        "website": "https://companybeta.example.com",
+        "image": "shape2.webp",
+        "membership_level": "Silver",
+        "other_info": "Established in 2005."
+    },
+    {
+        "name": "Company Gamma",
+        "address": "1213 Market Street",
+        "phone": "555-1213",
+        "website": "https://companygamma.example.com",
+        "image": "shape3.webp",
+        "membership_level": "Gold",
+        "other_info": "Established in 2010."
+    },
+    {
+        "name": "Company Delta",
+        "address": "1415 Market Street",
+        "phone": "555-1415",
+        "website": "https://companydelta.example.com",
+        "image": "shape4.webp",
+        "membership_level": "Bronze",
+        "other_info": "Established in 2020."
+    },
+    {
+        "name": "Company Epsilon",
+        "address": "1617 Market Street",
+        "phone": "555-1617",
+        "website": "https://companyepsilon.example.com",
+        "image": "shape1.webp",
+        "membership_level": "Silver",
+        "other_info": "Established in 2021."
+    },
+    {
+        "name": "Company Zeta",
+        "address": "1819 Market Street",
+        "phone": "555-1819",
+        "website": "https://companyzeta.example.com",
+        "image": "shape2.webp",
+        "membership_level": "Gold",
+        "other_info": "Established in 2022."
+    },
+    {
+        "name": "Company Eta",
+        "address": "2021 Market Street",
+        "phone": "555-2021",
+        "website": "https://companyeta.example.com",
+        "image": "shape3.webp",
+        "membership_level": "Platinum",
+        "other_info": "Established in 2023."
+    }
+]
